@@ -38,7 +38,9 @@ function getNamedRangesByExactMatches(namedRanges, ...namesToMatch) {
 }
 
 function getEditorName(editorEmail) {
-  const { NAMES, EMAILS } = constants().RANGE.EDITORS;
+  const NAMES = 'EDITORS_NAMES';
+  const EMAILS = 'EDITORS_EMAILS';
+
   var editorNamesValues = SpreadsheetApp.getActiveSpreadsheet()
     .getRangeByName(NAMES)
     .getValues();
@@ -74,11 +76,12 @@ function getRangeByName(namedRanges, rangeName) {
 }
 
 function getCellDownload({ namedRanges, sheet }) {
-  const { RANGE } = constants();
+  const DOWNLOAD_SLIDES = 'DOWNLOAD_SLIDES';
+  const DEFAULT_DOWNLOAD_SLIDES = 'A1';
 
-  return stringMatchesNamedRange(RANGE.GLOBAL.DOWNLOAD_SLIDES, namedRanges)
-    ? getRangeByName(namedRanges, RANGE.GLOBAL.DOWNLOAD_SLIDES)
-    : sheet.getRange(RANGE.GLOBAL.DEFAULT_DOWNLOAD_SLIDES);
+  return stringMatchesNamedRange(DOWNLOAD_SLIDES, namedRanges)
+    ? getRangeByName(namedRanges, DOWNLOAD_SLIDES)
+    : sheet.getRange(DEFAULT_DOWNLOAD_SLIDES);
 }
 
 function getCell({ sheetName, cellA1Notation }) {
