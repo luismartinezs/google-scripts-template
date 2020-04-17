@@ -1,0 +1,20 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier", "googleappsscript"],
+  "env": {
+    "googleappsscript/googleappsscript": true
+  },
+  "rules": {
+    "prettier/prettier": ["error"],
+    "no-unused-vars": 0,
+    "prefer-template": 0,
+    "func-names": 0,
+    "no-underscore-dangle": 0,
+    "no-var": 0,
+    "no-undef": 0,
+    "object-shorthand": 0,
+    "vars-on-top": 0,
+    "prefer-destructuring": 0,
+    "no-plusplus": 0
+  }
+}

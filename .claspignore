@@ -1,0 +1,9 @@
+node_modules/**
+package*.json
+README.md
+__test__/**
+jest.config.js
+.eslintrc.json
+.prettierrc
+.vscode/**
+babel.config.js
