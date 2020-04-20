@@ -9,7 +9,8 @@ Mainly purposed to work with Google Sheets.
 - Create a new Google Sheet
 - Open the attached script (Tools > Script Editor)
 - Copy the script id from the url, and paste it in the file `.clasp.json`
-- Install clasp globally, if you didn't: `npm install -g @google/clasp`
+- Install clasp globally, and enable Google Apps Script API (follow the instructions in the [Clasp docs](https://github.com/google/clasp))
+  - Note that it may take some minutes for the Google Apps Script API activation to take effect
 - Push the local files to the remote script: `clasp push`
 
 ## [CLASP documentation](https://github.com/google/clasp#pull)
