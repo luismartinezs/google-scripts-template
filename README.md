@@ -1,7 +1,18 @@
-# Readme
+# Template to develop Google Apps Script in Google Sheets
 
+Use this template as a starting point to develop your own Google Apps Scripts applications.
 
-[CLASP documentation](https://github.com/google/clasp#pull)
+Mainly purposed to work with Google Sheets.
+
+## How to use it
+
+- Create a new Google Sheet
+- Open the attached script (Tools > Script Editor)
+- Copy the script id from the url, and paste it in the file `.clasp.json`
+- Install clasp globally, if you didn't: `npm install -g @google/clasp`
+- Push the local files to the remote script: `clasp push`
+
+## [CLASP documentation](https://github.com/google/clasp#pull)
 
 CLASP works similar to git.
 
@@ -11,7 +22,8 @@ Pull changes from google apps script: `clasp pull`
 
 `npm run push`, push committed changes to git and push any changes (committed or not) to google apps script
 
-
 ## Tests
 
-Google Apps Script does not accept imports / exports. To test, uncomment any "module.exports"
+Google Apps Script does not accept imports / exports. Before running the unit tests locally, uncomment any "module.exports"
+
+Run unit tests: `npm run test`
