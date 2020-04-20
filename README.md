@@ -25,6 +25,8 @@ Pull changes from google apps script: `clasp pull`
 
 ## Tests
 
-Google Apps Script does not accept imports / exports. Before running the unit tests locally, uncomment any "module.exports"
+Google Apps Script does not accept imports / exports. Before running the unit tests locally, uncomment any `module.exports`
+
+Before pushing to the Google Apps Script, comment any `module.exports` in any files you push
 
 Run unit tests: `npm run test`
